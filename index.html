@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Adopt Me Items</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<button onclick="changeQty(${i}, 1)">+</button>
+
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header-box">
+    <h2>Free Adopt Me Pets</h2>
+    <p class="subtitle">Created by Uplift Games</p>
+
+    <nav class="inner-nav">
+      <button class="nav-btn active" onclick="switchTab(event, 'adoptme')">Adopt Me</button>
+      <button class="nav-btn" onclick="switchTab(event, 'brainrot')">Brainrot</button>
+      <button class="nav-btn" onclick="switchTab(event, 'mm2')">MM2</button>
+    </nav>
+  </div>
+
+  <!-- ADOPT ME TAB -->
+  <div id="adoptme" class="tab-page">
+    <!-- Adopt Me content here -->
+  </div>
+
+  <!-- BRAINROT TAB -->
+  <div id="brainrot" class="tab-page hidden">
+    <!-- Brainrot content here -->
+  </div>
+
+  <!-- MM2 TAB -->
+  <div id="mm2" class="tab-page hidden">
+    <!-- MM2 content here -->
+  </div>
+
+  <div class="claim-panel">
+    <div class="input-area">
+      <label>Roblox Username</label>
+      <input id="username" placeholder="Enter username..." />
+      <button onclick="saveUsername()">Save</button>
+      <p id="savedUser" class="saved-text"></p>
+    </div>
+
+    <div class="selected-box">
+      <h3>Selected Items</h3>
+      <div id="selectedCount" class="big-number">0</div>
+      <button id="claimBtn" class="claim-btn">Claim Selected</button>
+    </div>
+  </div>
+
+  <h3 class="section-title">Choose Items</h3>
+
+  <div class="grid" id="petGrid">
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <h3 class="footer-title">AdoptMe Org</h3>
+    <p class="footer-desc">Giving free Adopt Me items safely and instantly.</p>
+
+    <div class="social-links">
+      <a href="#" class="social fb"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social ig"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social tw"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="social yt"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="social tk"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="social dc"><i class="fab fa-discord"></i></a>
+    </div>
+
+    <p class="copyright">© 2025 AdoptMe Org — All Rights Reserved.</p>
+<div class="mode-buttons">
+  <button class="mode-btn">U</button>
+  <button class="mode-btn">N</button>
+  <button class="mode-btn">M</button>
+</div>
+
+  </div>
+</footer>
+
+<!-- Modal Alert -->
+<div class="modal-overlay hidden" id="alertModal" role="alertdialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal">
+    <h2 id="modalTitle">Selection Required</h2>
+    <p id="modalDesc">Please select at least one pet before claiming!</p>
+    <button id="closeModalBtn">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

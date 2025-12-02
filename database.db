@@ -1,0 +1,10 @@
+CREATE TABLE Students (
+    StudentID INTEGER PRIMARY KEY,
+    Name TEXT,
+    Age INTEGER
+);
+
+INSERT INTO Students (Name, Age) VALUES
+('Alice', 20),
+('Bob', 22),
+('Chris', 19);
